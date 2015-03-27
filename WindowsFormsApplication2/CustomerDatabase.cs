@@ -115,7 +115,7 @@ namespace CustomerDatabaseApplication
 
             Customer tempCustomer = Customer.findCustomerByID(Int32.Parse(searchID));
 
-            CustomerControl asdf = new CustomerControl(tempCustomer);
+            CustomerControl newInfo = new CustomerControl(tempCustomer);
 
             foreach (Control controls in panel1.Controls)
             {
