@@ -43,8 +43,8 @@
             this.StateLabel = new System.Windows.Forms.Label();
             this.ZipLabel = new System.Windows.Forms.Label();
             this.ZipTextBox = new System.Windows.Forms.TextBox();
-            this.StateComboBox = new System.Windows.Forms.ComboBox();
             this.TheButton = new System.Windows.Forms.Button();
+            this.StateTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // CustomerIDTextBox
@@ -176,16 +176,6 @@
             this.ZipTextBox.TabIndex = 15;
             this.ZipTextBox.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
-            // StateComboBox
-            // 
-            this.StateComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.StateComboBox.FormattingEnabled = true;
-            this.StateComboBox.Location = new System.Drawing.Point(136, 243);
-            this.StateComboBox.Name = "StateComboBox";
-            this.StateComboBox.Size = new System.Drawing.Size(100, 21);
-            this.StateComboBox.TabIndex = 16;
-            this.StateComboBox.SelectedIndexChanged += new System.EventHandler(this.StateComboBox_SelectedIndexChanged);
-            // 
             // TheButton
             // 
             this.TheButton.Location = new System.Drawing.Point(136, 293);
@@ -196,12 +186,19 @@
             this.TheButton.UseVisualStyleBackColor = true;
             this.TheButton.Click += new System.EventHandler(this.TheButton_Click);
             // 
+            // StateTextBox
+            // 
+            this.StateTextBox.Location = new System.Drawing.Point(136, 243);
+            this.StateTextBox.Name = "StateTextBox";
+            this.StateTextBox.Size = new System.Drawing.Size(100, 20);
+            this.StateTextBox.TabIndex = 18;
+            // 
             // CustomerControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.StateTextBox);
             this.Controls.Add(this.TheButton);
-            this.Controls.Add(this.StateComboBox);
             this.Controls.Add(this.ZipTextBox);
             this.Controls.Add(this.ZipLabel);
             this.Controls.Add(this.StateLabel);
@@ -242,7 +239,7 @@
         private System.Windows.Forms.Label StateLabel;
         private System.Windows.Forms.Label ZipLabel;
         private System.Windows.Forms.TextBox ZipTextBox;
-        private System.Windows.Forms.ComboBox StateComboBox;
         private System.Windows.Forms.Button TheButton;
+        private System.Windows.Forms.TextBox StateTextBox;
     }
 }

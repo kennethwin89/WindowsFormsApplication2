@@ -113,9 +113,7 @@ namespace CustomerDatabaseApplication
             string searchID;
             searchID = Prompt.ShowDialog("Enter ID of customer you wish to modify", "Update Customer");
 
-            Customer tempCustomer = Customer.findCustomerByID(Int32.Parse(searchID));
-
-            CustomerControl newInfo = new CustomerControl(tempCustomer);
+            CustomerControl newInfo = new CustomerControl(Int32.Parse(searchID), CustomerControl.UpdateCustomer);
 
             foreach (Control controls in panel1.Controls)
             {
@@ -127,7 +125,7 @@ namespace CustomerDatabaseApplication
 
         private void CreateCustomerButtonClick()
         {
-            CustomerControl newGuy = new CustomerControl(CustomerControl.AddCustomer);
+            CustomerControl newGuy = new CustomerControl(-1, CustomerControl.AddCustomer);
             foreach (Control controls in panel1.Controls)
             {
                 panel1.Controls.Remove(controls);

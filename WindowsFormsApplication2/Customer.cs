@@ -137,7 +137,7 @@ namespace CustomerDatabaseApplication
         {
             get
             {
-                return Int32.Parse(CustomerObject.ID_KEY);
+                return this.Id;
             }
             set
             {

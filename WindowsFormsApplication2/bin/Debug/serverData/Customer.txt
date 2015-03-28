@@ -1,5 +1,6 @@
-6
-{"Id":1,"FirstName":"Kenneth","LastName":"Nguyen","Street1":"3423 Bevann Dr","Street2":"","City":"Farmers Branch","State":"TX","Zip":75234}
+9
+{"Id":1,"FirstName":"Kenneth","LastName":"Nguyen","Street1":"3423 Bevann Dr","Street2":"","City":"Farmers Branch","State":"Texas","Zip":75234}
 {"Id":2,"FirstName":"Robert","LastName":"Plant","Street1":"1234 Legendary Way","Street2":"","City":"Dallas","State":"TX","Zip":75234}
 {"Id":3,"FirstName":"Jimmy","LastName":"Page","Street1":"1234 Zeppelin Rd","Street2":"","City":"Frisco","State":"TX","Zip":12456}
-{"Id":5,"FirstName":"James","LastName":"Page","Street1":"1234 Zeppelin Rd","Street2":"","City":"Frisco","State":"TX","Zip":12456}
+{"Id":7,"FirstName":"David","LastName":"Gallegos","Street1":"1234 Awesome Street","Street2":"","City":"Plano","State":"TX","Zip":12456}
+{"Id":8,"FirstName":"John Paul","LastName":"Jones","Street1":"2134 Everliving","Street2":"","City":"Vultures","State":"TX","Zip":32534}
