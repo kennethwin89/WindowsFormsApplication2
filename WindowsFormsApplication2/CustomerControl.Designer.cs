@@ -44,7 +44,8 @@
             this.ZipLabel = new System.Windows.Forms.Label();
             this.ZipTextBox = new System.Windows.Forms.TextBox();
             this.TheButton = new System.Windows.Forms.Button();
-            this.StateTextBox = new System.Windows.Forms.TextBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.StateComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // CustomerIDTextBox
@@ -186,18 +187,20 @@
             this.TheButton.UseVisualStyleBackColor = true;
             this.TheButton.Click += new System.EventHandler(this.TheButton_Click);
             // 
-            // StateTextBox
+            // StateComboBox
             // 
-            this.StateTextBox.Location = new System.Drawing.Point(136, 243);
-            this.StateTextBox.Name = "StateTextBox";
-            this.StateTextBox.Size = new System.Drawing.Size(100, 20);
-            this.StateTextBox.TabIndex = 18;
+            this.StateComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.StateComboBox.FormattingEnabled = true;
+            this.StateComboBox.Location = new System.Drawing.Point(136, 243);
+            this.StateComboBox.Name = "StateComboBox";
+            this.StateComboBox.Size = new System.Drawing.Size(100, 21);
+            this.StateComboBox.TabIndex = 18;
             // 
             // CustomerControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.StateTextBox);
+            this.Controls.Add(this.StateComboBox);
             this.Controls.Add(this.TheButton);
             this.Controls.Add(this.ZipTextBox);
             this.Controls.Add(this.ZipLabel);
@@ -240,6 +243,7 @@
         private System.Windows.Forms.Label ZipLabel;
         private System.Windows.Forms.TextBox ZipTextBox;
         private System.Windows.Forms.Button TheButton;
-        private System.Windows.Forms.TextBox StateTextBox;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.ComboBox StateComboBox;
     }
 }

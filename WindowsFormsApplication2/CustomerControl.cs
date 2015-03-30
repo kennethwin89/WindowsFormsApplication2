@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StatesComboList;
 
 namespace CustomerDatabaseApplication
 {
@@ -26,7 +27,9 @@ namespace CustomerDatabaseApplication
 
             panelDisplay = display;
 
-            
+            BindingSource bs = new BindingSource();
+            bs.DataSource = StateArray.Abbreviations();
+            StateComboBox.DataSource = bs;
 
             if (panelDisplay == AddCustomer && custID == -1)
             {
@@ -45,7 +48,7 @@ namespace CustomerDatabaseApplication
                 Street1TextBox.Text = selectedCustomer.Street1;
                 Street2TextBox.Text = selectedCustomer.Street2;
                 CityTextBox.Text = selectedCustomer.City;
-                StateTextBox.Text = selectedCustomer.State;
+                StateComboBox.Text = selectedCustomer.State;
                 ZipTextBox.Text = selectedCustomer.ZipCode.ToString();
 
             }
@@ -111,7 +114,7 @@ namespace CustomerDatabaseApplication
                 (LastNameTextBox.Text != "") &&
                 (Street1TextBox.Text != "") &&
                 (CityTextBox.Text != "") &&
-                (StateTextBox.Text != "") &&
+                (StateComboBox.Text != "") &&
                 (ZipTextBox.Text != ""))
             {
                 // Catches and throws an exception if user enters letters into the zipcode field. 
@@ -130,7 +133,7 @@ namespace CustomerDatabaseApplication
                         Street1TextBox.Text,
                         Street2TextBox.Text,
                         CityTextBox.Text,
-                        StateTextBox.Text,
+                        StateComboBox.Text,
                         Int32.Parse(ZipTextBox.Text));
 
                     // Add Customer to IO Server
@@ -150,7 +153,7 @@ namespace CustomerDatabaseApplication
                 Street1TextBox.Enabled = false;
                 Street2TextBox.Enabled = false;
                 CityTextBox.Enabled = false;
-                StateTextBox.Enabled = false;
+                StateComboBox.Enabled = false;
                 ZipTextBox.Enabled = false;
 
                 // Hide the Add Customer button
@@ -168,7 +171,7 @@ namespace CustomerDatabaseApplication
                 selectedCustomer.Street1 = Street1TextBox.Text;
                 selectedCustomer.Street2 = Street2TextBox.Text;
                 selectedCustomer.City = CityTextBox.Text;
-                selectedCustomer.State = StateTextBox.Text;
+                selectedCustomer.State = StateComboBox.Text;
                 selectedCustomer.ZipCode = Int32.Parse(ZipTextBox.Text);
 
                 Customer.updateCustomer(selectedCustomer);
